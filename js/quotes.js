@@ -14,7 +14,7 @@ var quotes = [
     {
       quote: "Nothing is given. Everything is earned.",
       source: "Lebron James",
-      citation: "",
+      citation: "ESPN",
       year: "2014"
     },
     {
