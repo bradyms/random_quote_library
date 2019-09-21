@@ -4,21 +4,21 @@ project 1 - A Random Quote Generator
 ******************************************/
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-// Logging arry of objects to the console
+// logging arry of objects to the console
 console.log(quotes);
 
-// Creating the getrandomquote function and passing quotes through it
+// creating the getrandomquote function and passing quotes through it
 function getRandomQuote(quotes) {
   // quoteId variable that generates random quote
   var quoteID = Math.floor(Math.random() * quotes.length);
-  // this selects the random quote object from quotes
+  // this selects the random quote object from quotes and returns it
   return quotes[quoteID];
 }
 
 
-// Creating the printquote function
+// creating the printquote function
 function printQuote() {
-  // result variable that calls getrandomquote function while passing quotes through it
+  // getRandomQuotes is called and the returned value is stored in the variable result
   var result = getRandomQuote(quotes);
   // htmlString variable that's set to an empty string           
   var htmlString = '';
@@ -39,10 +39,11 @@ function printQuote() {
 
   // thequotebox variable that prints quote box
   var theQuoteBoxDiv = document.getElementById("quote-box");
+  // get theQuoteBoxDiv element and assign it to htmlString
   theQuoteBoxDiv.innerHTML = htmlString;
 }
 
-// instruction givin code
+// instruction givin code. when button is clicked the event listener below will be triggered, and it will call the printQuote function. 
 var theLoadQuoteButton = document.getElementById('loadQuote');
 theLoadQuoteButton.addEventListener("click", printQuote, false);
 
