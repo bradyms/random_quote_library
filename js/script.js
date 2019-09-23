@@ -37,7 +37,7 @@ function printQuote() {
   // closing htmlString with final p tag
   htmlString += `</p>`;
 
-  // thequotebox variable that prints quote box
+  // get the element to update, now that we have the new random quote, and assign it the variable named theQuoteBoxDiv
   var theQuoteBoxDiv = document.getElementById("quote-box");
   // get theQuoteBoxDiv element and assign it to htmlString
   theQuoteBoxDiv.innerHTML = htmlString;
